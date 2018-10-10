@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,12 +9,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="293.0" prefWidth="508.0" style="-fx-background-color: #335262;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.ifro.control.MenuPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="293.0" prefWidth="508.0" style="-fx-background-color: #335262;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.MenuPrincipalController">
    <children>
       <ImageView fitHeight="160.0" fitWidth="163.0" layoutX="173.0" layoutY="54.0">
          <image>
-            <Image url="@../../../../../../../../../../Downloads/calculator%20(2).png" />
+            <Image url="@../../../../calculator%20(2).png" />
          </image>
       </ImageView>
       <Label layoutX="314.0" layoutY="225.0" text="JT" textFill="#ea9760">
@@ -26,5 +26,15 @@
             <Font name="Century Gothic Bold" size="22.0" />
          </font>
       </Label>
+      <JFXButton fx:id="btnCalculadora" buttonType="RAISED" layoutY="2.0" onAction="#abiriCalculadora" text="Calculadora" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCalculadora1" buttonType="RAISED" layoutX="90.0" layoutY="2.0" onAction="#abiriCalculadora" text="Histórico" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
