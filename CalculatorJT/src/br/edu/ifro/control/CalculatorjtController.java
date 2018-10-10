@@ -69,7 +69,7 @@ public class CalculatorjtController implements Initializable {
 
     @FXML
     private void efetuar(ActionEvent event) {
-        if(! txtDisplay.getText().equals(""))
+        if(!txtDisplay.getText().equals("")){
                 operador2 = Integer.parseInt(txtDisplay.getText());
                 switch(operador){
                     case "+" : resultado = operador1 + operador2;
@@ -82,6 +82,9 @@ public class CalculatorjtController implements Initializable {
                     break;
                 }
                 txtDisplay.setText("" + resultado);
+        }
+        else
+           txtDisplay.setText(""); 
         
     }
 
