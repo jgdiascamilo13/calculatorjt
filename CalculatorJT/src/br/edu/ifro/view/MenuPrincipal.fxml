@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="293.0" prefWidth="508.0" style="-fx-background-color: #335262;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.ifro.control.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="160.0" fitWidth="163.0" layoutX="173.0" layoutY="54.0">
+         <image>
+            <Image url="@../../../../../../../../../../Downloads/calculator%20(2).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="314.0" layoutY="225.0" text="JT" textFill="#ea9760">
+         <font>
+            <Font name="Century Gothic Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="176.0" layoutY="225.0" text="Calculadora" textFill="#6a8a91">
+         <font>
+            <Font name="Century Gothic Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

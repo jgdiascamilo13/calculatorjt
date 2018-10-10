@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="262.0" prefWidth="255.0" style="-fx-background-color: #335262;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.CalculatorjtController">
+   <children>
+      <JFXTextField fx:id="txtDisplay" alignment="CENTER" layoutX="14.0" layoutY="18.0" prefHeight="37.0" prefWidth="168.0" style="-fx-background-color: #e5e5e5;" />
+      <JFXButton fx:id="btn7" layoutX="14.0" layoutY="75.0" onAction="#botao7" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="7" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn9" layoutX="130.0" layoutY="75.0" onAction="#botao9" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="9" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn8" layoutX="72.0" layoutY="75.0" onAction="#botao8" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="8" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn5" layoutX="72.0" layoutY="117.0" onAction="#botao5" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="5" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn6" layoutX="130.0" layoutY="117.0" onAction="#botao6" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="6" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn4" layoutX="14.0" layoutY="117.0" onAction="#botao4" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="4" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn2" layoutX="72.0" layoutY="159.0" onAction="#botao2" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="2" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn3" layoutX="130.0" layoutY="159.0" onAction="#botao3" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="3" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn1" layoutX="14.0" layoutY="159.0" onAction="#botao1" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="1" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnigual" layoutX="72.0" layoutY="202.0" onAction="#efetuar" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #ea9760;" text="=">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn0" layoutX="14.0" layoutY="202.0" onAction="#botao0" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #6a8a91;" text="0" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btndividir" layoutX="130.0" layoutY="202.0" onAction="#dividir" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #ea9760;" text="/">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnmultiplicar" layoutX="187.0" layoutY="202.0" onAction="#multiplicar" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #ea9760;" text="*">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnsubtrair" layoutX="187.0" layoutY="159.0" onAction="#subtrair" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #ea9760;" text="-">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnsomar" layoutX="187.0" layoutY="117.0" onAction="#somar" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #ea9760;" text="+">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnlimpar" layoutX="187.0" layoutY="75.0" onAction="#limpar" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #ea9760;" text="C">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnhist" layoutX="187.0" layoutY="18.0" onAction="#mostrarHistorico" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #A4A4A4;" text="H">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
