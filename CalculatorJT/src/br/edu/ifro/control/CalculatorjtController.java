@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package br.edu.ifro.control;
-
+import br.edu.ifro.model.calculadora;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
@@ -13,6 +13,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
  *
@@ -69,6 +72,7 @@ public class CalculatorjtController implements Initializable {
 
     @FXML
     private void efetuar(ActionEvent event) {
+        operador2 = Integer.parseInt(txtDisplay.getText());
         if(!txtDisplay.getText().equals("")){
                 operador2 = Integer.parseInt(txtDisplay.getText());
                 switch(operador){
@@ -83,13 +87,30 @@ public class CalculatorjtController implements Initializable {
                 }
                 txtDisplay.setText("" + resultado);
         }
-        else
+        else{
            txtDisplay.setText(""); 
+        }
         
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("calculadora");
+        EntityManager em = emf.createEntityManager();
+
+        calculadora cal = new calculadora();
+        cal.setPrimeiroValor(operador1);
+        cal.setSegundoValor(operador2);
+        cal.setResultado(resultado);
+        cal.setOperador(operador);
+        
+        em.getTransaction().begin();
+        em.persist(cal);
+        em.getTransaction().commit(); 
+           
     }
+    
 
     @FXML
     private void dividir(ActionEvent event) {
+        operador1 = Integer.parseInt(txtDisplay.getText());
+        operador = "/";
         if(!txtDisplay.getText().equals("")){
             operador1 = Integer.parseInt(txtDisplay.getText());
             operador = "/";
@@ -99,6 +120,8 @@ public class CalculatorjtController implements Initializable {
 
     @FXML
     private void multiplicar(ActionEvent event) {
+        operador1 = Integer.parseInt(txtDisplay.getText());
+        operador = "*";
         if(!txtDisplay.getText().equals("")){
             operador1 = Integer.parseInt(txtDisplay.getText());
             operador = "*";
@@ -108,6 +131,9 @@ public class CalculatorjtController implements Initializable {
 
     @FXML
     private void subtrair(ActionEvent event) {
+        operador1 = Integer.parseInt(txtDisplay.getText());
+        operador = "-";
+        
         if(!txtDisplay.getText().equals("")){
             operador1 = Integer.parseInt(txtDisplay.getText());
             operador = "-";
@@ -117,6 +143,9 @@ public class CalculatorjtController implements Initializable {
 
     @FXML
     private void somar(ActionEvent event) {
+        operador1 = Integer.parseInt(txtDisplay.getText());
+        operador = "+";
+        
         if(!txtDisplay.getText().equals("")){
             operador1 = Integer.parseInt(txtDisplay.getText());
             operador = "+";

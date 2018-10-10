@@ -5,6 +5,7 @@
  */
 package br.edu.ifro.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,6 +14,7 @@ import javax.persistence.Id;
  *
  * @author 00669412295
  */
+@Entity
 public class calculadora {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
