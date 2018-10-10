@@ -58,6 +58,9 @@ public class CalculatorjtController implements Initializable {
     @FXML
     private JFXButton btnhist;
     
+    private int operador1, operador2, resultado;
+    private String operador;
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -66,26 +69,61 @@ public class CalculatorjtController implements Initializable {
 
     @FXML
     private void efetuar(ActionEvent event) {
+        if(! txtDisplay.getText().equals(""))
+                operador2 = Integer.parseInt(txtDisplay.getText());
+                switch(operador){
+                    case "+" : resultado = operador1 + operador2;
+                    break;
+                    case "-" : resultado = operador1 - operador2;
+                    break;
+                    case "*" : resultado = operador1 * operador2;
+                    break;
+                    case "/" : resultado = operador1 / operador2;
+                    break;
+                }
+                txtDisplay.setText("" + resultado);
+        
     }
 
     @FXML
     private void dividir(ActionEvent event) {
+        if(!txtDisplay.getText().equals("")){
+            operador1 = Integer.parseInt(txtDisplay.getText());
+            operador = "/";
+            txtDisplay.setText("");
+            }
     }
 
     @FXML
     private void multiplicar(ActionEvent event) {
+        if(!txtDisplay.getText().equals("")){
+            operador1 = Integer.parseInt(txtDisplay.getText());
+            operador = "*";
+            txtDisplay.setText("");
+            }
     }
 
     @FXML
     private void subtrair(ActionEvent event) {
+        if(!txtDisplay.getText().equals("")){
+            operador1 = Integer.parseInt(txtDisplay.getText());
+            operador = "-";
+            txtDisplay.setText("");
+            }
     }
 
     @FXML
     private void somar(ActionEvent event) {
+        if(!txtDisplay.getText().equals("")){
+            operador1 = Integer.parseInt(txtDisplay.getText());
+            operador = "+";
+            txtDisplay.setText("");
+            }
     }
 
     @FXML
     private void limpar(ActionEvent event) {
+        txtDisplay.setText("");
     }
 
     @FXML
@@ -95,38 +133,47 @@ public class CalculatorjtController implements Initializable {
 
     @FXML
     private void botao9(ActionEvent event) {
+        txtDisplay.setText("" + txtDisplay.getText() + 9);
     }
 
     @FXML
     private void botao8(ActionEvent event) {
+        txtDisplay.setText("" + txtDisplay.getText() + 8);
     }
 
     @FXML
     private void botao5(ActionEvent event) {
+        txtDisplay.setText("" + txtDisplay.getText() + 5);
     }
 
     @FXML
     private void botao6(ActionEvent event) {
+        txtDisplay.setText("" + txtDisplay.getText() + 6);
     }
 
     @FXML
     private void botao4(ActionEvent event) {
+        txtDisplay.setText("" + txtDisplay.getText() + 4);
     }
 
     @FXML
     private void botao2(ActionEvent event) {
+        txtDisplay.setText("" + txtDisplay.getText() + 2);
     }
 
     @FXML
     private void botao3(ActionEvent event) {
+        txtDisplay.setText("" + txtDisplay.getText() + 3);
     }
 
     @FXML
     private void botao1(ActionEvent event) {
+        txtDisplay.setText("" + txtDisplay.getText() + 1);
     }
 
     @FXML
     private void botao0(ActionEvent event) {
+        txtDisplay.setText("" + txtDisplay.getText() + 0);
     }
 
     @FXML
